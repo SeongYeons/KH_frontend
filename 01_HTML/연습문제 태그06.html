@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고객정보</title>
+</head>
+
+<body>
+
+    <h1>주문하기</h1>
+
+    <form>
+        <label for="userid">고객명 :</label>
+        <input type="text" id="userid">
+        <input type="submit" value="접속">
+        <input type="reset" value="다시 입력">
+        <p>
+            <label for="phone">전화번호 : </label>
+            <input type="tel" name="phone" id="phone">
+            <input type="submit" value="접속">
+            <input type="reset" value="다시 입력">
+        </p>
+        <P>
+            <label for="email">E-mail : </label>
+            <input type="email" name="email" id="email"required>
+            <input type="submit" value="접속">
+            <input type="reset" value="다시 입력">
+        </P>
+        
+
+        <fieldset>
+            <legend>피자 사이즈</legend>
+           <p> <label><input type="radio" name="pizza" value="Small">Small</label></p>
+           <p> <label><input type="radio" name="pizza" value="Medium">Medium</label></p>
+            <p></p> <label><input type="radio" name="pizza" value="Large">Large</label></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>토핑 선택 </legend>
+               <p> <label><input type="checkbox" name="vegetable" value="bacon">베이컨</label></p>
+               <p> <label><input type="checkbox" name="vegetable" value="cheese">치즈</label></p>
+               <p> <label><input type="checkbox" name="vegetable" value="onion">양파</label></p>
+               <p> <label><input type="checkbox" name="vegetable" value="mushroom">버섯</label></p>
+        </fieldset>
+
+        <label for="time">희망 배송 시간 : </label>
+        <input type="time" name="time" id="time">
+        <input type="reset" value="다시 입력">
+       <p><textarea placeholder="입력해주세요"></textarea></p>
+    
+    </form>
+
+
+
+</body>
+
+</html>

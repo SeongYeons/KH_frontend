@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+
+<body>
+    <h1>회원가입</h1>
+    <fieldset>
+        <legend><STrong>필수 입력 사항</STrong></legend>
+        <STrong><label for="user_id">ID </label></STrong>
+        <input type="text" name="user_id" placeholder="아이디 10글자 이내" max="10" style="width: 200px;">
+        <input type="button" value="중복확인">
+        <p><STrong><label for="userpwd">비밀번호 </label></STrong>
+            <input type="password" name="userpwd" id="userpwd" placeholder="영문,숫자,특수문자 포함 8자 이상" style="width: 200px;">
+        <p><strong><label for="pwdcheck">비밀번호 확인 </strong><input type="password" name="pwdcheck"></label></p>
+
+        <strong><label for="email">Email </label></strong>
+        <input type="email" name="email" id="email" list="email">
+        <select name="emails" id="emails">
+            <option value="직접입력">직접입력</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>추가 정보</legend>
+        <label for="file">프로필 사진 :</label>
+        <input type="file" name="file" id="file">
+        <p>
+            <label for="">성별 :</label>
+            <input type="radio" name="gender" id="남">남자
+            <input type="radio" name="gender" id="여">여자
+        </p>
+
+        <p>
+            <label for="date">생년월일 : </label>
+            <input type="date" name="date" id="date">
+            <br><br>
+        </p>
+        <label for="sport"><input type="checkbox" name="sport" id="baseball" required>야구</label>
+        <label for="sport"><input type="checkbox" name="sport" id="basketball">농구</label>
+        <label for="sport"><input type="checkbox" name="sport" id="soccer">축구</label>
+        <p>
+            <label for="sport"><input type="checkbox" name="sport" id="study">공부</label>
+            <label for="sport"><input type="checkbox" name="sport" id="music">음악감상</label>
+        </p>
+        <label for="otder"><input type="checkbox" name="sport" id="otder">기타
+            <input type="text" name="sport" id="otder">
+        </label>
+        <h4>자기소개</h4>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </fieldset>
+
+    <input type="button" value="회원가입">
+    <input type="button" value="다시입력">
+    <input type="button" value="이전으로">
+
+
+
+
+</body>
+
+</html>

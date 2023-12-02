@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 관련 태그</title>
+</head>
+<body>
+
+    <h2>이미지 관련 태그</h2>
+    <h3>img 태그</h3>
+    <h4>src 속성</h4>
+        <!-- <img width = "100%"  src="../resources/image/bgsample.PNG"> -->
+        <img src="https://digimon.net/cimages/digimon/omegamon-x.jpg">
+    <h4>alt 속성</h4>
+      <img width="100%" src="../resources/image/flower1PNG" alt="이사진은 벗꽃 사진입니다">
+    
+    <h4>width height 속성</h4>
+    <h5>고정 크기 단위</h5>
+        <img width="200" height="150" src="../resources/image/flower1.PNG" alt="">
+        <img width="200px" height="150px" src="../resources/image/flower1.PNG" alt="">
+        <img width="200px" src="../resources/image/flower1.PNG" alt="">
+        <img height="150px" src="../resources/image/flower1.PNG" alt="">
+    
+    <h5>가변 크기 단위</h5>
+        <img width="25%" src="../resources/image/flower2.PNG" alt="">
+        <img width="25%" src="../resources/image/flower2.PNG" alt="">
+
+    <h3>이미지 맵</h3>
+    <h4>이미지 구역을 2개로 나누어 각각 링크 설정</h4>
+        <img usemap="#circle_map" width="600px" height="300px" src="../resources/image/forest1.PNG">
+        <map name="#rect_map">
+            <area shape="rect" coords="0,0 300,300" href="http://www.naver.com" target="_self">
+            <area shape="rect" coords="300,0,600,300" href="http://www.google.com" target="_blank">
+        </map>
+
+        <map name="circle_map">
+            <area shape="circle" coords="300,150,100" href="http://www.daum.net">
+        </map>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

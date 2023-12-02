@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 관련 태그</title>
+</head>
+
+<body>
+    <h2>폼 관련 태그</h2>
+    <h3>검색 폼</h3>
+
+    <form name="search_from" action="" method="get" autocomplete="off">
+        <label for="keyword">검색할 내용 :</label>
+
+        <!-- 
+    name 속성 
+        from 태그 안에서 input 태그들을 구분하는 역할을 한다.
+        서버로 값을 전달할 떄 name 속성과 사용자가 입력한 값을 
+        묶어서 전송한다. (name = value) 
+-->
+        <input type="keyword" name="search_keyword" id="keyword">
+        <!-- 
+    submit 버튼을 눌렀을 때
+    action 속성에서 지정한 서버로 사용자가 입력한 값들을 
+    method 속성에 지정된 전송 방식으로 전송한다.
+-->
+        <input type="submit" value="검색">
+    </form>
+
+    <hr>
+
+    <h3>회원가입 폼</h3>
+    <form name="signup_form" method="get">
+        <fieldset>
+            <legend>회원정보</legend>
+            <label for="userId">아이디 : </label>
+            <input type="text" name="userId" id="userId" autofocus required>
+
+            <br><br>
+
+            <label for="userpwd">비밀번호</label>
+            <input type="password" name="userPwd" id="userPwd" required>
+        </fieldset>
+        <fieldset>
+            <legend>배송정보</legend>
+            <label for="userName">수령인 : </label>
+            <input type="text" name="userName" id="userName" value="홍길동" readonly>
+
+            <br><br>
+            <label for="address">주소 : </label>
+            <input type="text" name="address" id="address" placeholder="주소를 입력해주세요">
+
+        </fieldset>
+        <input type="submit" value="회원가입">
+        <input type="reset" value="초기화">
+    </form>
+
+
+    <h3>input 태그</h3>
+    <h4>type = "hidden"</h4>
+
+    <form>
+        <input type="hidden" name="hiddenvalue" value="1234">
+
+        <input type="submit" value="전송">
+
+        <h4>type ="test|password|search|url|email|tel"</h4>
+
+        <label for="id">아이디 : </label>
+        <input type="text" name="id" id="id" value="hong" size="20" maxlength="8" placeholder="아이디를입력하세요">
+
+
+        <br><br>
+
+        <label for="pwd">비밀번호 : </label>
+        <input type="password" name="pwd" id="" pwd size="30" maxlength="14" placeholder="비밀번호를 입력하세요">
+
+        <br><br>
+
+        <label for="search">검색 : </label>
+        <input type="search" name="search" id="search" size="30" maxlength="10" placeholder="검색할 내용을 입력하세요">
+
+        <br><br>
+        <label for="homePage">홈페이지 : </label>
+        <input type="url" name="homePage" id="homePage" value="http://">
+        <br><br>
+
+        <label for="email">이메일 : </label>
+        <input type="email" name="email" id="email" placeholder="이메일을 입력 해주세요">
+
+        <br><br>
+        <label for="phone"> 전화 번호 : </label>
+        <input type="tel" name="phone" id="phone">
+        <br><br>
+
+        <input type="submit" value="전송">
+
+        <input type="reset" value="다시입력">
+
+    </form>
+
+    <h4>type="number|range"</h4>
+
+    <form>
+        <label for="amount">수량 : </label>
+        <input type="number" name="amount" id="amount" value="0" min="10" max="1000" step="10" style="width: 150px">
+        <br><br>
+        <label for="point">포인트 : </label>
+        <input type="range" name="point" id="point" min="0" max="500" step="10" style="width: 200px;">
+        <br><br>
+
+
+        <input type="submit" value="전송">
+        <input type="submit" value="다시입력">
+    </form>
+
+    <h4>type = "color|file"</h4>
+    <form>
+        <label for="color">색상 : </label>
+        <input type="color" name="color" id="color" value="#770077">
+
+        <br><br>
+
+        <label for="">파일 : </label>
+        <input type="file" name="uploadFile" id="uploadFile" multiple>
+
+        <br><br>
+
+        <input type="submit" value="전송">
+    </form>
+
+    <h4>type = "radio|checkbox"</h4>
+
+    <form>
+        <fieldset>
+            <legend>성별</legend>
+
+            <input type="radio" name="gender" value="남">남자</label>
+            <input type="radio" name="gender" id="female" value="여자">
+            <label for="female">여자</label>
+        </fieldset>
+
+        <input type="submit" value="전송">
+    </form>
+    <form>
+        <fieldset>
+            <legend>취미</legend>
+            <label><input type="checkbox" name="hobby" value="baseball" checked>야구</label>
+            <label><input type="checkbox" name="hobby" value="football">축구</label>
+            <label><input type="checkbox" name="hobby" value="basketball">농구</label>
+        </fieldset>
+
+        <input type="submit" value="전송">
+    </form>
+
+    <h4>type = "date|month|week|time|datetime-local"</h4>
+
+    <form>
+        <label for="date">Date :</label>
+        <input type="date" name="date" id="date" min="2023-12-01" max="2023-12-15">
+
+        <label for="month">month : </label>
+        <input type="month" name="month" id="month" min="2023-09" max="2024-03">
+
+        <br><br>
+
+        <label for="week">week :</label>
+        <input type="week" name="week" id="week" value="2023-W37" min="2023-W34" max="2023-W40">
+
+        <br><br>
+
+        <label for="time">time : </label>
+        <input type="time" name="time" id="time" value="23:59:32">
+
+        <br><br>
+
+        <label for="datetime">Datetime : </label>
+        <input type="datetime-local" name="datetime" id="datetime" value="2024-05-25T20:20:32" multiple>
+
+        <input type="submit" value="전송">
+        <input type="reset" value="다시입력">
+
+    </form>
+
+    <h4>type = "button|submit|reset"</h4>
+    <form>
+        <input type="text" name="message" placeholder="값을 입력해주세요">
+        <!-- input 태그 사용 -->
+        <!-- <input type="submit" value="전송">
+        <input type="reset" value="다시 입력">
+        <input type="button" value="버튼" onclick="alert('버튼 클릭');"> -->
+
+        <!-- button 태그 사용  두개다 같은기능을한다-->
+        <button>전송</button>
+        <button type="submit">전송</button>
+        <button type="reset">다시 입력</button>
+        <button type="button" onclick="alert('button 클릭')">버튼</button>
+    </form>
+
+
+    <h3>select 태그</h3>
+
+    <form>
+        <label for="national">국적</label>
+        <select name="national" id="national">
+            <optgroup label="아시아">
+                <option value="kr">한국</option>
+                <option value="ch">중국</option>
+                <option value="jp">일본</option>
+            </optgroup>
+            <optgroup label="기타">
+                <option value="us">미국</option>
+                <option value="fr">프랑스</option>
+            </optgroup>
+        </select>
+        <input type="submit" value="전송">
+    </form>
+
+    <h3>datalist 태그</h3>
+    <form>
+        <label for="color2"> 색상 :</label>
+        <input type="text" name="color2" id="color2" list="colors">
+        <datalist id="colors">
+            <option value="black">검정색</option>
+            <option value="white">흰색</option>
+            <option value="skyblue">하늘색</option>
+        </datalist>
+
+        <input type="submit" value="전송">
+    </form>
+
+
+
+    <h3>textarea 태그</h3>
+    <form>
+        <textarea name="testarea" cols="30" rows="10" placeholder="입력 하세요" style="resize : none"></textarea>
+    </form>
+
+    <h3>progress,meter 태그</h3>
+    <form>
+        <progress value="70" max="100"></progress>
+
+        <br><br>
+
+        <meter min="0" max="100" value="65" low="60" high="70"></meter>
+
+    </form>
+
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+
+</html>
