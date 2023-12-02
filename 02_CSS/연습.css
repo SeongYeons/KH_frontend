@@ -1,0 +1,12 @@
+.tltle {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.he {
+    background-color: #eee;
+}
+
+#ca {
+    caption-side: bottom;
+}

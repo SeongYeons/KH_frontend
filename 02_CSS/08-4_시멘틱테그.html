@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 문서 구조 실습</title>
+    <style>
+        div,
+        div * {
+            border: 2px solid red;
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            width: 1000px;
+            height: 800px;
+            margin: auto;
+        }
+
+        header {
+            height: 25%;
+        }
+
+        header>div {
+            height: 80%;
+        }
+
+        nav {
+            height: 20%;
+        }
+
+        header>div>div {
+            height: 100%;
+            float: left;
+        }
+
+        #logo {
+            width: 20%;
+        }
+
+        #search {
+            width: 60%;
+        }
+
+        #login {
+            width: 20%;
+        }
+
+        main {
+            height: 55%;
+        }
+
+        main>* {
+            height: 100%;
+            float: left;
+        }
+
+        aside {
+            width: 40%;
+        }
+        #main {
+            width: 50%;
+        }
+        #side {
+            width: 10%;
+        }
+        footer {
+            height: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div>
+                <div id="logo"></div>
+                <div id="search"></div>
+                <div id="login"></div>
+            </div>
+            <nav></nav>
+        </header>
+        <main>
+            <aside></aside>
+            <article id="main"></article>
+            <article id="side"></article>
+        </main>
+        <footer></footer>
+
+    </div>
+
+</body>
+
+</html>
