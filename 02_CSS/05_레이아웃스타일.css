@@ -1,20 +1,17 @@
-/* 박스 모델  */
-/* width height */
+/* 박스 모델 */
+/* width, height */
 #fixed-size {
     border: 5px solid red;
-    /* width, height 콘텐츠의 너비와 높이를 지정한다 */
-    height: 200px;
+    /* width, height 콘텐츠의 너비와 높이를 지정한다. */
     width: 200px;
-    padding: 20px;
-    /* padding: 20px;a */
+    height: 200px;
+    /* padding: 20px; */
     /* 요소의 너비와 높이를 테두리를 기준으로 지정한다. */
     /* box-sizing: border-box; */
-
-
 }
 
 #variable-size {
-    border: 5px solid yellow;
+    border: 5px solid red;
     width: 20%;
     height: 200px;
 }
@@ -28,12 +25,11 @@
 }
 
 .display-inline {
-    /* display: none; */
     display: inline;
 }
 
 .display-block {
-    display: block
+    display: block;
 }
 
 .display-inline-block {
@@ -45,25 +41,23 @@
     width: 100px;
     height: 100px;
     background-color: beige;
-    /* display: inline; */
+    /* display: inline-block; */
 }
 
 /* padding */
 #padding1 {
-
     padding: 20px;
 }
 
 #padding2 {
-
-    /* padding-top: 50px;
-    padding-bottom: 20px;
-    padding-left: 30px;
-    padding-right: 20px;  */
-    /* 상/하 : 50px 좌/우 : 30px */
+    /* padding-top: 50px; */
+    /* padding-bottom: 20px; */
+    /* padding-left: 30px; */
+    /* padding-right: 20px; */
+    /* 상/하: 50px, 좌/우: 30px */
     /* padding: 50px 30px; */
-    /* 상:50px 우:30px 하: 40px 좌 : 20px */
-    padding: 50px 30px 50px 20px;
+    /* 상: 50px, 우: 30px, 하: 40px, 좌: 20px */
+    padding: 50px 30px 40px 20px;
 }
 
 /* margin */
@@ -72,20 +66,19 @@
 }
 
 #margin2 {
-    /* margin-top: 60px;
-    margin-left: 20px;
-    margin-bottom: 50px;
-    margin-right: 30px; */
-    /* 상/하: 50px 좌/우 : 30px */
+    /* margin-top: 60px; */
+    /* margin-bottom: 50px; */
+    /* margin-left: 20px; */
+    /* margin-right: 30px; */
+    /* 상/하 50px, 좌/우 30px */
     margin: 50px 30px;
-    /* 상:50px 우:30px 하: 40px 좌 : 20px */
+    /* 상: 50px, 우: 30px, 하: 40px, 좌: 20px */
     margin: 50px 30px 40px 20px;
-
 }
 
-/* 테두리스타일 */
+/* 테두리 스타일 */
 .border {
-    border: 10px solid black;
+    border: 10px solid;
     width: 100px;
     height: 100px;
     margin-bottom: 10px;
@@ -96,30 +89,31 @@
 }
 
 #border2 {
-    /* border-style: hidden; */
-    color: gray;
-    box-shadow: 10px 10px 10px 15px inset;
+    border-style: hidden;
+    /* color: yellow; */
+    box-shadow: 10px -10px 15px 15px gray inset;
 }
 
 #border3 {
     border-style: dashed;
     /* border-width: 15px; */
-    /* border-top-width: 15px;
-    border-bottom-width: thin;
-    border-left-width: thick;
-    border-right-width: medium; */
+    /* border-top-width: 15px; */
+    /* border-bottom-width: thin; */
+    /* border-left-width: thick; */
+    /* border-right-width: medium; */
     /* border-width: 20px 30px; */
     border-width: 20px 30px 10px 20px;
-    /* border-color: red; */
-    border-top-color: red;
-    border-bottom-color: yellow;
-    border-left-color: blue;
-    border-right-color: green;
 }
 
 #border4 {
     border-style: dotted;
-    border-color: hotpink yellowgreen orangered aqua;
+    /* border-color: red; */
+    /* border-top-color: red; */
+    /* border-bottom-color: violet; */
+    /* border-left-color: yellowgreen; */
+    /* border-right-color: yellow; */
+    /* border-color: red green; */
+    border-color: hotpink yellowgreen orangered aquamarine;
 }
 
 #border5 {
@@ -127,7 +121,7 @@
     /* border: 15px double blue; */
     border-top: 15px double blue;
     border-bottom: 15px double red;
-    border-left: 15px double yellow;
+    border-left: 15px double green;
     border-right: 15px double orange;
 }
 
@@ -149,9 +143,9 @@
 
 #border10 {
     border-style: solid;
-    /* border-radius: 20px; */
-    /* border-top-right-radius: 20px; */
-    /* border-top-left-radius: 10px 40px;*/
+    /* border-radius: 15px; */
+    /* border-top-left-radius: 50px; */
+    /* border-top-left-radius: 20px 40px; */
     border-radius: 50%;
 }
 
@@ -162,6 +156,7 @@
     width: 100px;
     height: 100px;
     float: left;
+    /* float: right; */
     margin-right: 5px;
     margin-bottom: 5px;
 }
@@ -187,6 +182,7 @@
 
 #second {
     position: absolute;
+    top: 50px;
     left: 50px;
     width: 100px;
     height: 100px;
@@ -194,8 +190,8 @@
 }
 
 #fixed {
-    /* position: fixed; */
-    position: sticky;
+    position: fixed;
+    /* position: sticky; */
     top: 50px;
     left: 600px;
     width: 100px;
@@ -203,6 +199,7 @@
     background-color: blue;
 }
 
+/* visibility */
 .visibility {
     border: 1px solid;
     width: 100px;
@@ -217,7 +214,7 @@
 #visibility2 {
     /* display: none; */
     visibility: hidden;
-    background-color: skyblue;
+    background-color: chocolate;
 }
 
 #visibility3 {
@@ -239,24 +236,25 @@
 
 #z-index1 {
     background-color: orange;
-    left: 100px;
     top: 100px;
+    left: 100px;
+    z-index: 100;
 }
 
 #z-index2 {
     background-color: blueviolet;
     top: 50px;
     left: 50px;
-    z-index: 100;
+    z-index: 9999;
 }
 
 #z-index3 {
     background-color: yellowgreen;
-    z-index: 60px;
+    z-index: 60;
 }
 
 /* 플렉스 박스 */
-.container1 {
+.container {
     width: 800px;
     display: flex;
     background-color: whitesmoke;
@@ -264,46 +262,32 @@
     margin-bottom: 30px;
 }
 
-.container1 p {
-    color: white;
-    text-align: center;
-    width: 120px;
-}
-
-
 .box {
     width: 120px;
-    background-color: black;
-    margin: 5px;
     padding: 5px;
+    margin: 5px;
+    background-color: black;
+}
+
+.container p {
+    color: white;
+    text-align: center;
 }
 
 /* flex-direction */
 #fd-1 {
-    /* flex-direction: row; */
-    /* flex-direction: row-reverse; */
-    /* flex-direction: column; */
     flex-direction: row;
 }
 
 #fd-2 {
-    /* flex-direction: row; */
-    /* flex-direction: row-reverse; */
-    /* flex-direction: column; */
     flex-direction: row-reverse;
 }
 
 #fd-3 {
-    /* flex-direction: row; */
-    /* flex-direction: row-reverse; */
-    /* flex-direction: column; */
     flex-direction: column;
 }
 
 #fd-4 {
-    /* flex-direction: row; */
-    /* flex-direction: row-reverse; */
-    /* flex-direction: column; */
     flex-direction: column-reverse;
 }
 
@@ -320,11 +304,14 @@
     flex-wrap: wrap-reverse;
 }
 
+/* flex-flow */
 #ff-1 {
-    /* flex-flow: nowrap; */
-    flex-flow: row-reverse wrap;
+    /* flex-flow: row nowrap; */
+    flex-flow: row wrap;
+    /* flex-flow: row-reverse wrap; */
 }
 
+/* justify-content */
 #jc-1 {
     justify-content: flex-start;
 }
@@ -376,20 +363,25 @@
     display: grid;
     /* grid-template-columns: 200px 200px 200px; */
     /* grid-template-columns: 1fr 1fr 1fr; */
-    grid-template-rows: minmax(100px, auto) minmax(100px, auto);
     grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+    /* grid-template-rows: 100px 100px; */
+    grid-template-rows: minmax(100px, auto) minmax(100px, auto);
     /* column-gap: 30px; */
+    /* row-gap: 20px; */
     gap: 20px 30px;
 }
 
 .item {
-    background-color: #aaa;
+    background-color: #ccc;
 }
 
 .item:nth-child(even) {
-    background-color: red;
+    background-color: whitesmoke;
 }
 
+/* 그리드 라인 */
 #cg-2 {
     display: grid;
     width: 700px;
@@ -397,53 +389,69 @@
     grid-template-rows: repeat(3, 100px);
 }
 
-#gl-1 {
+#gl1 {
     background-color: blue;
+    /* grid-column-start: 1; */
+    /* grid-column-end: 4; */
     grid-column: 1/4;
 }
 
-#gl-2 {
-    background-color: greenyellow;
+#gl2 {
+    background-color: green;
+    /* grid-column-start: 1; */
+    /* grid-column-end: 2; */
     /* grid-column: 1/2; */
-    /* grid-row-start: 2;
-    grid-row-end: 4; */
+    grid-column-start: 1;
+    /* grid-row-start: 2; */
+    /* grid-row-end: 4; */
     grid-row: 2/4;
 }
 
-#gl-3 {
+#gl3 {
     background-color: orange;
+    /* grid-column-start: 2; */
+    /* grid-column-end: 4; */
     grid-column: 2/4;
+    /* grid-row-start: 2; */
+    /* grid-row-end: 3; */
+    /* grid-row: 2/3; */
+    grid-row-start: 2;
 }
 
-#gl-4 {
+#gl4 {
     background-color: yellow;
-    grid-column: 3/4;
+    grid-column-start: 3;
+    grid-row-start: 3;
 }
 
+/* 템플릿 영역 */
 #cg-3 {
     display: grid;
     width: 700px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 100px);
-    grid-template-areas: "ga1 ga1 ga1" "ga2 ga3 ga3" "ga2 . ga4";
+    grid-template-areas: 
+                        "ga1 ga1 ga1" 
+                        "ga2 ga3 ga3" 
+                        "ga2 . ga4";
 }
 
-#ga-1 {
+#ga1 {
     background-color: blue;
     grid-area: ga1;
 }
 
-#ga-2 {
+#ga2 {
     background-color: green;
     grid-area: ga2;
 }
 
-#ga-3 {
+#ga3 {
     background-color: orange;
     grid-area: ga3;
 }
 
-#ga-4 {
+#ga4 {
     background-color: yellow;
     grid-area: ga4;
 }

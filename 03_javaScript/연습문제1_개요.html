@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개요 실습 문제</title>
+    <style>
+        .area {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 5px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h2>개요 실습 문제</h2>
+    <h3>문제 1. 색상 조절하기</h3>
+
+    <div id="div1" class="area"></div>
+    <input type="color" id="color">
+    <button onclick="changeColor();">변경</button>
+
+    <script>
+        function changeColor() {
+            let div1 = document.getElementById('div1');
+            // let inputColor = document.getElementById('color');
+            let color = document.getElementById('color').value;
+
+            console.log(color);
+
+            div1.style.backgroundColor = color;
+        }
+    </script>
+
+    <h3>문제 2. 크기 변경하기</h3>
+    
+    <div id="div2" class="area"></div>
+    <button onclick="setSize('50px');">50X50</button>
+    <button onclick="setSize('100px');">원본(100X100)</button>
+    <button onclick="setSize('200px');">200X200</button>
+
+    <script>
+        function setSize(size) {
+            let div2 = document.getElementById('div2');
+
+            div2.style.width = size;
+            div2.style.height = size;
+        }
+    </script>
+
+    <h3>문제 3. HTML 태그에 접근하기</h3>
+
+    <form>
+        <label for="customer">구매자 : </label>
+        <input type="text" name="customer" id="customer" 
+            placeholder="구매자의 이름을 입력하세요.">
+
+        <br><br>
+
+        <label for="product">상품명 : </label>
+        <input type="text" name="product" id="product"
+            placeholder="구매 상품명을 입력하세요.">
+
+        <br><br>
+
+        <label for="price">가격 : </label>
+        <input type="text" name="price" id="price"
+            placeholder="구매 가격을 입력하세요.">
+
+        <br><br>
+
+        <button type="button" onclick="printValue();">입력값 출력하기</button>
+    </form>
+
+    <!-- <button>입력값 출력하기</button> -->
+
+    <p id="p1"></p>
+
+    <script>
+        function printValue() {
+            let customer = '';
+            let input = document.getElementsByTagName('input');
+            let product = document.getElementById('product').value;
+            let price = document.getElementsByName('price')[0].value;
+            let p1 = document.getElementById('p1');
+
+            for (let i = 0; i < input.length; i++) {
+                if (input[i].name === 'customer') {
+                    customer = input[i].value;
+
+                    break;
+                }
+            }
+
+
+            p1.innerText = `${customer}님의 구매 상품은 ${product}, 구매 가격은 ${price}원 입니다.`;
+        }
+    </script>
+
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+</body>
+</html>

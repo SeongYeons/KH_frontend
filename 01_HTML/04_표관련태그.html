@@ -1,101 +1,92 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>표 관련 태그</title>
     <style>
-        /*
-        샐렉터 {
-            속성명 : 값 ;
-            속성명 : 값 ;
-        }
-        */
-        /* td {
-            width: 2cm;
-            height: 2cm;
-        } */
+        /* 
+            셀렉터 {
+                속성명: 값;
+                속성명: 값;
+                ...
+            }
 
+            td {
+                width: 2cm;
+                height: 2cm;
+            }
+        */
+        
         thead {
-            background-color: deeppink;
-            color: aliceblue;
+            background-color: #7de97d;
+            color: white;
         }
-        tfoot{
-            background-color: rgb(26, 39, 26);
+
+        tfoot {
+            background-color: limegreen;
             color: white;
             text-decoration: underline;
         }
+
         /*
         기존 테이블에도 스타일이 적용된다.
-        구조를 나누지 않으면 모두 본문이라 여겨진다.
-        tbody{
-            background-color: aqua;
-            color: rgb(15, 15, 15);
-            text-decoration: double;
-            font-size: 11pt;
-        }*/
-        /* td,th {
-            width: 50px;
-            height: 50px;
-        } */
-        
-       tbody {
-
-        background-color: orangered;
-
-       }
-     
+        (구조를 나누지 않으면 모두 본문이라 여겨진다.)
+        tbody {
+            font-size: 22pt;
+        }
+        */
     </style>
 </head>
-
 <body>
     <h2>표 관련 태그</h2>
-    
-    <h3>기본적인 표만들기 </h3>
-<figure>
-    <!--border : 표의 테두리 두께-->
-    <table border="1">
-        <caption>웹 브라우저의 종류</caption>
-        <tr style="background-color: aqua;">
-            <th>브라우저명</th>
-            <th>제조사</th>
-            <th>홈페이지</th>
-        </tr>
-        <tr>
-            <td>엣지</td>
-            <td>MS</td>
-            <td>https://www.microsoft.com</td>
-        </tr>
-        <tr>
-            <td>크롬</td>
-            <td>Google</td>
-            <td>https://www.Google.com</td>
-        </tr>
-        <tr>
-            <td>사파리</td>
-            <td>Apple</td>
-            <td>https://www.Safari.com</td>
-        </tr>
-    </table>
-    <figcaption>이 표는 웹 브라우저에 대한 내용을 정리한 표 입니다.</figcaption>
-    <figcaption>설명 내용을 여러 줄로 표기할 수 있다</figcaption>
 
-</figure>   
+    <h3>기본적인 표 만들기</h3>
+    
+    <figure>
+        <!-- border: 표의 테두리 두께 -->
+        <table border="1">
+            <caption>웹 브라우저의 종류</caption>
+            <tr>
+                <th>브라우저명</th>
+                <th>제조사</th>
+                <th>홈페이지</th>
+            </tr>
+            <tr>
+                <td>엣지</td>
+                <td>MS</td>
+                <td>https://www.microsoft.com</td>
+            </tr>
+            <!-- <caption>웹 브라우저의 종류</caption> -->
+            <tr>
+                <td>크롬</td>
+                <td>Google</td>
+                <td>https://www.google.com</td>
+            </tr>
+            <tr>
+                <td>사파리</td>
+                <td>Apple</td>
+                <td>https://www.apple.com</td>
+            </tr>
+            <!-- <caption>웹 브라우저의 종류</caption> -->
+        </table>
+        <figcaption>이 표는 웹 브라우저에 대한 내용을 정리한 표 입니다.</figcaption>
+        <figcaption>설명 내용을 여러 줄로 표기할 수 있다.</figcaption>
+    </figure>
 
     <hr>
 
     <h3>표의 행과 열 합치기</h3>
-    
     <h4>회원 정보</h4>
-    
-<table border="1">
 
+    <!-- table[border="1"]>tr*4>td*4 -->
+    <!-- table[border="1"]>(tr>td*4)*4 -->
+    <table border="1">
         <tr>
-            <td colspan="2" rowspan="2" width ="130px" height ="130px">사진</td>
+            <td colspan="2" rowspan="2" width="130px" height="130px">사진</td>
             <!-- <td></td> -->
             <td width="80px">이름</td>
-            <td width ="200px"></td>
+            <td width="200px"></td>
         </tr>
         <tr>
             <!-- <td></td> -->
@@ -104,20 +95,21 @@
             <td></td>
         </tr>
         <tr>
-            <td width ="65px" height ="50px">주소</td>
-            <td colspan="3"</td>
-            <!-- <td></td>
-            <td></td> -->
+            <td width="65px" height="50px">주소</td>
+            <td colspan="3"></td>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
         </tr>
         <tr>
-            <td height ="120px">자기소개</td>
+            <td height="120px">자기소개</td>
             <td colspan="3"></td>
-            <!-- <td></td>
-            <td></td> -->
+            <!-- <td></td> -->
+            <!-- <td></td> -->
         </tr>
     </table>
 
     <h3>표 구조 태그</h3>
+    
     <table border="1">
         <thead>
             <tr>
@@ -125,14 +117,13 @@
                 <th>나이</th>
                 <th>주소</th>
             </tr>
-         </thead>
+        </thead>
         <tbody>
             <tr>
                 <td>문인수</td>
                 <td>22</td>
-                <td>경기도 파우시</td>
+                <td>경기도 파주시</td>
             </tr>
-       
             <tr>
                 <td>홍길동</td>
                 <td>24</td>
@@ -143,92 +134,21 @@
                 <td>24</td>
                 <td>서울특별시</td>
             </tr>
-      </tbody>
-      <tfoot>
+        </tbody>
+        <tfoot>
             <tr>
-                <th width = "350px colspan="2">총 인원</th>
-                <td colspan="2" style="text-align: center;">3명</td>
+                <th colspan="2">총 인원</th>
+                <td>3명</td>
             </tr>
-     </tfoot>     
-</table>
+        </tfoot>
+    </table>
 
-<h1>연습문제2_표태그</h1>
-<table border="1">
-   <thead>
-    <th colspan="5" rowspan="2">하수정 보석 컬렉션</th>
-
-    <tr>
-        <!-- <td></td>
-        <td></td>
-        <td></td>
-        <td></td> -->
-        <!-- <td></td>
-        <td></td>
-        <td></td> -->
-    </tr>
-</thead>
-    <tr>
-        <tbody>
-        <th width= "80px" height = "120px"rowspan="5">제품리스트</th>
-        <th>코드</th>
-        <th>분류</th>
-        <th>가격</th>
-        <th>구매가능 개수</th>
-        <!-- <td></td>
-        <td></td> -->
-    </tbody>
-    </tr>
-
-    <tr>
-        <td ></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <!-- <td></td> -->
-        <!-- <td></td>
-        <td></td> -->
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <!-- <td></td> -->
-        <!-- <td></td>
-        <td></td> -->
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <!-- <td></td> -->
-        <!-- <td></td>
-        <td></td> -->
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <!-- <td></td> -->
-        <!-- <td></td>
-        <td></td> -->
-    </tr>
-    <tr>
-        <th colspan="3">총합</th>
-        <td></td>
-        <td></td>
-      
-      
-       
-    </tr>
-</table>
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
 </body>
 </html>

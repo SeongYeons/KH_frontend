@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>색상스타일</title>
+    <title>색상 스타일</title>
     <style>
+        /* background-color, background-clip */
         .bg-clip {
-            border: 15px dashed rgb(100, 100, 100, 3);
+            border: 15px dashed rgba(0, 0, 0, .3);
             width: 30%;
             height: 300px;
             margin: 20px;
-            padding: 20px;
+            padding: 30px;
             /* background-color: indianred; */
             /* background-color: #0ff; */
-            background-color: hsl(300, 100%, 50%, .3);
+            background-color: hsla(300, 100%, 50%, .3);
         }
 
         #bg-clip1 {
@@ -29,23 +29,22 @@
             background-clip: content-box;
         }
 
-        /* background-image,background-repeat.background-size,background-attachment */
-
+        /*  background-image, background-repeat, ..., background-attachment */
         #bg-img {
-            border: 15px dashed black;
             width: 80%;
             height: 650px;
             padding: 50px;
-            background-image: url("https://cdn.kado.net/news/photo/202306/1186980_617644_2237.jpg");
+            border: 15px dashed rgba(0, 0, 0, .3);
+            /* background-image: url("../resources/image/bgsample.PNG"); */
+            background-image: url("https://search.pstatic.net/sunny/?src=https%3A%2F%2Fphoto.akmall.com%2Fimage1%2Fgoods%2F29%2F73%2F91%2F16%2F129739116_03_500.jpg&type=sc960_832");
 
             /* 이미지 반복 설정 */
-            /* background-repeat :repeat */
+            /* background-repeat: repeat; */
             /* background-repeat: repeat-x; */
             /* background-repeat: repeat-y; */
             background-repeat: no-repeat;
 
             /* 이미지 크기 설정 */
-
             /* background-size: auto; */
             /* background-size: contain; */
             /* background-size: cover; */
@@ -56,48 +55,48 @@
             /* background-position: left top; */
             /* background-position: center top; */
             /* background-position: right top; */
+            /* background-position: left center; */
             /* background-position: center center; */
+            /* background-position: center; */
             /* background-position: left bottom; */
             /* background-position: center bottom; */
             /* background-position: right bottom; */
-            /* background-position: 30px 50px; */
-            background-position:50% 30%;
+            /* background-position: 50px 50px; */
+            /* background-position: 50% 50%; */
 
-            /* 이미지 배치 기준설정 */
-            /* background-origin: border-box; */
+            /* 이미지 배치 기준 설정 */
             /* background-origin: padding-box; */
+            /* background-origin: border-box; */
             /* background-origin: content-box; */
 
-            /* 이미지 고정 여부 고정 설정 */
-
+            /* 이미지 고정 여부 설정 */
+            /* background-attachment: scroll; */
             background-attachment: fixed;
-
         }
     </style>
 </head>
-
 <body>
-
     <h2>색상 스타일</h2>
-    <h3>background-color, background-cilp</h3>
-
+    <h3>background-color, background-clip</h3>
     <!-- div.bg-clip#bg-clip$*3 -->
     <div class="bg-clip" id="bg-clip1"></div>
     <div class="bg-clip" id="bg-clip2"></div>
     <div class="bg-clip" id="bg-clip3"></div>
+
     <h3>
-        background-image,background-repeat.background-size,
-        background-attachment
+        background-image, background-repeat, background-size,
+        background-position, background-origin, background-attachment
     </h3>
-    <div id="bg-img" class="bg-clip"></div>
+    <div id="bg-img"></div>
 
-
-
-
-
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
 </body>
-
-
 </html>

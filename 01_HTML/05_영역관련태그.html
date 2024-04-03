@@ -1,60 +1,66 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>영역관련태그</title>
+    <title>영역 관련 태그</title>
     <style>
-        div,span {
+        div, span {
             border: 1px solid black;
         }
     </style>
 </head>
-
 <body>
-    <h2>영역관련태그</h2>
-    <!--
-        div 태그 
+    <h2>영역 관련 태그</h2>
+    <!--  
+        div 태그
             블록 레벨 요소의 태그로 레이아웃 분할을 위해 사용한다.
-            콘텐츠가 없으면 높이는 0,너비는 100% 이다.
-        span 태그 
+            콘텐츠가 없으면 높이는 0, 너비는 100% 이다.
+
+        span 태그
             인라인 레벨 요소의 태그로 콘텐츠를 감싸는 역할을 한다.
-            콘텐츠가 없으면 높이도 0, 너비도 0이다.
-
+            콘텐츠가 없으면 높이는 0, 너비도 0이다.
     -->
-        <h3>div 태그와 span 태그의 차이 1</h3>
-            <h4>div 태그</h4>
-        <!--div{$ 번쨰 영역}*3-->
-                <div>1 번째 영역</div>
-                <div>2 번째 영역</div>
-                <div>3 번째 영역</div>
-        
-         <h4>span 태그</h4>
-                <span>1 번째 영역</span>
-                <span>2 번째 영역</span>
-                <span>3 번째 영역</span>
+    <h3>div 태그와 span 태그의 차이</h3>
+    <h4>div 태그</h4>
 
-        <h3>iframe</h3>
+    <!-- div{$ 번째 영역}*3 -->
+    <div>1 번째 영역</div>
+    <div>2 번째 영역</div>
+    <div>3 번째 영역</div>
 
-        <!--
-            상대 경로 
-                현재 파일을 기준으로 상대적인 경로를 지정하는 방법
-                현재 파일과 동일한 경로일때
+    <h4>span 태그</h4>
+
+    <!-- span*3{$ 번째 영역} -->
+    <span>1 번째 영역</span>
+    <span>2 번째 영역</span>
+    <span>3 번째 영역</span>
+
+    <h3>iframe</h3>
+
+    <!--  
+        상대 경로
+            현재 파일을 기준으로 상대적인 경로를 지정하는 방법
+                현재 파일과 동일한 경로일 때
                     src="04_표관련태그.html"
                     src="./04_표관련태그.html"
-                현재 파일의 하위 경로일 때 
+                현재 파일의 하위 경로일 때
                     src="./목록관련/03_목록관련태그.html"
-                현재 파일의 상위 경로 일때 
-                    src="../목록관련/03_목록관련태그.html"
-        -->
-
-        <!-- <iframe width="500px" height="500px" src="04_표관련태그.html"></iframe> -->
-        <!-- <iframe width="500px" height="500px" src="./04_표관련태그.html"></iframe> -->
-        <!-- <iframe width="500px" height="500px" src="./목록관련/03_목록관련태그.html"></iframe> -->
-        <!-- <iframe width="500px" height="500px" src="../목록관련/03_목록관련태그.html"></iframe> -->
-        <iframe width="1280" height="720" src="https://www.youtube.com/embed/uiz7EsMPsuw" title="NewJeans (뉴진스) - GODS | 마스터카드와 함께하는 2023 월드 챔피언십 결승 개막식" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+                현재 파일의 상위 경로일 때
+                    src="../03_목록관련태그.html"
+    -->
+    <iframe width="500px" height="500px" src="04_표관련태그.html"></iframe>
+    <!-- <iframe width="500px" height="500px" src="./04_표관련태그.html"></iframe> -->
+    <!-- <iframe width="500px" height="500px" src="./목록관련/03_목록관련태그.html"></iframe> -->
+    <!-- <iframe width="500px" height="500px" src="../03_목록관련태그.html"></iframe> -->
+    
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/5ch94AaPZRQ" title="태연(TAEYEON)의 킬링보이스를 라이브로! - I,그대라는 시,만약에,11:11,Blue,Time Lapse,Weekend,불티,사계,Gravity,INVU,너를 그리는 시간" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
 </body>
-
 </html>
